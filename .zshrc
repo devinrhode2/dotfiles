@@ -1,12 +1,16 @@
 
+# Add postgresql to PATH
 export PATH=/usr/local/opt/postgresql/bin:$PATH
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH
+# iirc found this on stackoverflow from a google search possibly including a brew/homebrew keyword
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$PATH
 
+# iirc From Go 1.2/1.3 Install instructions
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.rvm/bin
 
 export subl='subl -w -n '
 alias r='rvm 1.9.2 exec ruco'
