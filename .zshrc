@@ -23,7 +23,7 @@ export PROJECT_HOME=$HOME/repos
 source /usr/local/bin/virtualenvwrapper_lazy.sh
 
 echo "loading rvm.."
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+source ~/.rvm/scripts/rvm
 
 echo "loading nvm..."
 # The addition 'nvm install' attempts in ~/.profile
