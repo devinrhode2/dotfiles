@@ -17,9 +17,10 @@ alias r='rvm 1.9.2 exec ruco'
 alias emacs=/usr/local/Cellar/emacs-mac/emacs-24.4-mac-5.2/bin/emacs
 export EDITOR='subl -w '
 
-echo "loading virtualenwrapper.."
+# Lazy Load
 export WORKON_HOME=~/repos/dotfiles/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+export PROJECT_HOME=$HOME/repos
+source /usr/local/bin/virtualenvwrapper_lazy.sh
 
 echo "loading rvm.."
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
