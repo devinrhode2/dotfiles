@@ -12,23 +12,29 @@ export PATH=$PATH:$GOPATH/bin
 # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/.rvm/bin
 
-export subl='subl -w -n '
+alias subl='subl -w -n '
 alias r='rvm 1.9.2 exec ruco'
-alias emacs=/usr/local/Cellar/emacs-mac/emacs-24.4-mac-5.2/bin/emacs
+alias emacs=/usr/local/Cellar/emacs-mac/emacs-24.4.90-mac-5.4/bin/emacs
 export EDITOR='subl -w '
+
+# php
+# load php55
+# load_php() {
+#   export PATH="$(brew --prefix homebrew/php/php55)/bin:$PATH"
+#   launchctl load ~/Library/LaunchAgents/homebrew.mxcl.httpd24.plist
+#   launchctl load ~/Library/LaunchAgents/homebrew.mxcl.php55.plist
+# }
 
 # Lazy Load
 export WORKON_HOME=~/repos/dotfiles/.virtualenvs
 export PROJECT_HOME=$HOME/repos
 source /usr/local/bin/virtualenvwrapper_lazy.sh
 
-echo "loading rvm.."
 source ~/.rvm/scripts/rvm
 
 # START_PATH_CACHE
 # Ideally I'd like to write the use_cached_nvm_bins.sh
 # code into this PATH_CACHE block
-echo "adding node+npm binaries to PATH"
 source ~/.use_cached_nvm_bins.sh
 # END_PATH_CACHE
 
@@ -52,9 +58,6 @@ load_nvm() {
   strindex "$PATH" "$PREV_PATH"
 }
 
-
-
-echo "loading zgen..."
 source ~/repos/zgen/zgen.zsh
 
 # check if there's no init script
