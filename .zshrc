@@ -41,18 +41,20 @@ source ~/.use_cached_nvm_bins.sh
 load_nvm() {
   PREV_PATH=$PATH
   source ~/.nvm/nvm.sh
+  nvm install stable
+  nvm use stable
   strindex() { 
     x="${1%%$2*}"
     if [[ $x = $1 ]]; then
       echo "BIG ERROR LOL, nvm.sh apparently removed some PATH segments"
       # could also have an explicit check like this:
       # if !$PATH.contains(PREV_PATH) throw
-
     else
       i=${#x}
       length=${#PATH}
       bin_path_segment=${PATH:0:$i}
       echo "export PATH=$bin_path_segment\$PATH" > ~/.use_cached_nvm_bins.sh
+      echo "writing $bin_path_segment to ~/.use_cached_nvm_bins.sh"
     fi
   }
   strindex "$PATH" "$PREV_PATH"
