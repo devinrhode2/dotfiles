@@ -1,3 +1,8 @@
+## INSTALLATION
+# Make this your ~/.zshrc file and make sure to do the zgen install steps here:
+# https://github.com/tarjoilija/zgen#installation
+
+
 
 # Add postgresql to PATH
 # export PATH=/usr/local/opt/postgresql/bin:$PATH
@@ -62,7 +67,8 @@ load_nvm() {
   strindex "$PATH" "$PREV_PATH"
 }
 
-source ~/repos/zgen/zgen.zsh
+# load zgen
+source "${HOME}/.zgen/zgen.zsh"
 
 # check if there's no init script
 if ! zgen saved; then
