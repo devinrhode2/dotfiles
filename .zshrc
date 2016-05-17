@@ -1,6 +1,7 @@
 ## INSTALLATION
 # Make this your ~/.zshrc file and make sure to do the zgen install steps here:
 # https://github.com/tarjoilija/zgen#installation
+# You'll also need to change the default shell to zsh: https://github.com/robbyrussell/oh-my-zsh#4-change-your-default-shell
 
 
 
