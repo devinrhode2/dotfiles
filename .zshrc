@@ -26,37 +26,42 @@ export EDITOR='subl -w '
 # }
 
 # Lazy Load
-export WORKON_HOME=~/repos/dotfiles/.virtualenvs
-export PROJECT_HOME=$HOME/repos
-source /usr/local/bin/virtualenvwrapper_lazy.sh
+#export WORKON_HOME=~/repos/dotfiles/.virtualenvs
+#export PROJECT_HOME=$HOME/repos
+#source /usr/local/bin/virtualenvwrapper_lazy.sh
 
 source ~/.rvm/scripts/rvm
 
-# START_PATH_CACHE
-# Ideally I'd like to write the use_cached_nvm_bins.sh
-# code into this PATH_CACHE block
-source ~/.use_cached_nvm_bins.sh
-# END_PATH_CACHE
-
+export PATH=/Users/devinrhode2/.nvm/versions/node/v4.4.5/bin:$PATH
 load_nvm() {
-  PREV_PATH=$PATH
   source ~/.nvm/nvm.sh
-  strindex() { 
-    x="${1%%$2*}"
-    if [[ $x = $1 ]]; then
-      echo "BIG ERROR LOL, nvm.sh apparently removed some PATH segments"
-      # could also have an explicit check like this:
-      # if !$PATH.contains(PREV_PATH) throw
-
-    else
-      i=${#x}
-      length=${#PATH}
-      bin_path_segment=${PATH:0:$i}
-      echo "export PATH=$bin_path_segment\$PATH" > ~/.use_cached_nvm_bins.sh
-    fi
-  }
-  strindex "$PATH" "$PREV_PATH"
 }
+
+# # START_PATH_CACHE
+# # Ideally I'd like to write the use_cached_nvm_bins.sh
+# # code into this PATH_CACHE block
+# source ~/.use_cached_nvm_bins.sh
+# # END_PATH_CACHE
+# 
+# load_nvm() {
+#   PREV_PATH=$PATH
+#   source ~/.nvm/nvm.sh
+#   strindex() { 
+#     x="${1%%$2*}"
+#     if [[ $x = $1 ]]; then
+#       echo "BIG ERROR LOL, nvm.sh apparently removed some PATH segments"
+#       # could also have an explicit check like this:
+#       # if !$PATH.contains(PREV_PATH) throw
+# 
+#     else
+#       i=${#x}
+#       length=${#PATH}
+#       bin_path_segment=${PATH:0:$i}
+#       echo "export PATH=$bin_path_segment\$PATH" > ~/.use_cached_nvm_bins.sh
+#     fi
+#   }
+#   strindex "$PATH" "$PREV_PATH"
+# }
 
 source ~/repos/zgen/zgen.zsh
 
