@@ -7,18 +7,18 @@ ulimit -n 10240 unlimited
 
 export LT_HOME=/Applications
 
-if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
- export PATH="$HOME/adb-fastboot/platform-tools:$PATH"
-fi
+# if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
+#  export PATH="$HOME/adb-fastboot/platform-tools:$PATH"
+# fi
 
 #idk what I'm doing, don't think this is necessary anymore.
-reinstall_ember_deps(){
-    CURRENT_DIR=pwd
-    cd $(npm config get prefix)/lib/node_modules/ember-cli && rm -rf node_modules && npm cache clear && npm install
-    cd $CURRENT_DIR
-}
+# reinstall_ember_deps(){
+#     CURRENT_DIR=pwd
+#     cd $(npm config get prefix)/lib/node_modules/ember-cli && rm -rf node_modules && npm cache clear && npm install
+#     cd $CURRENT_DIR
+# }
 
-export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20160517/libexec/
+# export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20160517/libexec/
 
 
 # eval $(docker-machine env default)
@@ -36,9 +36,9 @@ export CLOSURE_PATH=/usr/local/Cellar/closure-compiler/20160517/libexec/
 
 
 #https://www.tensorflow.org/versions/r0.9/get_started/os_setup.html#installation-for-mac-os-x
-export CUDA_HOME=/usr/local/cuda
-export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
-export PATH="$CUDA_HOME/bin:$PATH"
+# export CUDA_HOME=/usr/local/cuda
+# export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
+# export PATH="$CUDA_HOME/bin:$PATH"
 
 
 # Add postgresql to PATH
@@ -54,7 +54,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$PATH
 # Add RVM to PATH for scripting
 # export PATH=$PATH:$HOME/.rvm/bin
 
-alias subl='subl -n '
+# alias subl='subl -n '
 # alias r='rvm 1.9.2 exec ruco'
 # alias emacs=/usr/local/Cellar/emacs-mac/emacs-24.4.90-mac-5.4/bin/emacs
 # export EDITOR='vim '
