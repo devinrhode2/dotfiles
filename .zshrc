@@ -45,7 +45,7 @@ export LT_HOME=/Applications
 # export PATH=/usr/local/opt/postgresql/bin:$PATH
 
 # iirc found this on stackoverflow from a google search possibly including a brew/homebrew keyword
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:~/bin:$PATH
 
 # From Go 1.2/1.3 Install instructions
 # export GOPATH=$HOME/go
