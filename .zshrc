@@ -430,3 +430,10 @@ fi
 # ==> Summary
 # 
 # 🍺  /usr/local/Cellar/python3/3.5.1: 7,675 files, 107M, built in 2 minutes 59 seconds
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# TODO load zsh completion? [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
