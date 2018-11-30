@@ -437,3 +437,11 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # TODO load zsh completion? [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# => nvm source string already in /Users/devinrhode2/.zshrc
+# => Appending bash_completion source string to /Users/devinrhode2/.zshrc
+# => Close and reopen your terminal to start using nvm or run the following to use it now:
+
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
