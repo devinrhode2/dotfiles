@@ -1,0 +1,36 @@
+{
+  "name": "git-diff-submodules",
+  "version": "0.0.1",
+  "description": "not ready for public usage. Sorry about that.",
+  "main": "git-diff-submodules.js",
+  "dependencies": {
+    "chokidar": "^2.1.5",
+    "minimist": "^1.2.0",
+    "shelljs": "^0.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devinrhode2/dotfiles.git"
+  },
+  "keywords": [
+    "git",
+    "diff",
+    "submodules",
+    "diff",
+    "each",
+    "submodule"
+  ],
+  "author": "devinrhode2",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devinrhode2/dotfiles/issues"
+  },
+  "bin": {
+    "git-diff-submodules": "./git-diff-submodules.js"
+  },
+  "homepage": "https://github.com/devinrhode2/dotfiles#readme"
+}
