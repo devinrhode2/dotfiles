@@ -8,6 +8,7 @@ if (!shell.which('git')) {
     shell.exit(1);
 }
 
+
 const changedSubmodulesCliOutput = shell.exec(
     'git diff --submodule=log centene-port -- src/app/q360-comps',
     {silent: true}
@@ -28,9 +29,9 @@ shell.exec(
     'cd src/app/q360-comps; ' +
     changedSubmodules.map(line => 
         'cd '+line+'; '+
-            'echo "SUBMODULE '+line.toUpperCase()+' ON BRANCH $(git rev-parse --abbrev-ref HEAD;)"; '+
+            'echo "SUBMODULE '+line+' ON BRANCH $(git rev-parse --abbrev-ref HEAD;)"; '+
             'echo ""; '+
-            "git diff centene-port -- . ':(exclude)package-lock.json' ':(exclude)dist'; "+
+            "git diff --color=always centene-port -- . ':(exclude)package-lock.json' ':(exclude)dist'; "+
         'cd ..; '
     ).join('') +
     'cd ../../..; '
