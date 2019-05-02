@@ -1,6 +1,6 @@
 {
   "name": "git-diff-submodules",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "not ready for public usage. Sorry about that.",
   "main": "git-diff-submodules.js",
   "dependencies": {
